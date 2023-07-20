@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="wrapper">
+   <div class="title-text">
+     <div class="title login">Login Form</div>
+     <div class="title signup">Signup Form</div>
+   </div>
+   <div class="form-container">
+     <div class="slide-controls">
+       <input type="radio" name="slide" id="login" checked>
+       <input type="radio" name="slide" id="signup">
+       <label for="login" class="slide login">Login</label>
+       <label for="signup" class="slide signup">Signup</label>
+       <div class="slider-tab"></div>
+     </div>
+     <div class="form-inner">
+    
+       <form action="#" class="login"  method="post">
+          
+         <div class="field">
+           <input type="text" name="email" placeholder="name@gmail.com" required>
+         </div>
+         <div class="field">
+           <input type="password" name="password" placeholder="Password" required>
+         </div>
+         <div class="pass-link"><a href="/password_forget">Forgot password?</a></div>
+         <div class="field btn">
+           <div class="btn-layer"></div>
+           <input type="submit" name="action" value="Login">
+         </div>
+         <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+         <div><center>
+            <label style="color:red;">{{erroruser}}</label>
+            </center></div> 
+      </form>
+    
+
+
+
+       <form action="" class="signup" method="post">
+         <div class="field">
+            <input type="text" name="name" placeholder="UserName" required>
+          </div>
+         <div class="field">
+           <input type="email" name="email" placeholder="Gmail" required>
+         </div>
+         <div class="field">
+           <input type="password" name="password" placeholder="Password" required>
+         </div>
+         <div class="field">
+           <input type="password" name="cpassword" placeholder="Confirm Password" required>
+         </div>
+         <div class="field btn">
+           <div class="btn-layer"></div>
+           <input type="submit" name="action" value="Signup">
+         </div>
+         <div><center>
+            <label style="color:red;">{{msg}}</label>
+            <label style="color:green;">{{susmsg}}</label>
+            <label style="color:red;">{{userexists}}</label>
+            <label style="color:red;">{{pwderror}}</label>
+            </center></div>
+       </form>
+     </div>
+   </div>
+ </div>
+
+
+{% endblock body %}

@@ -1,0 +1,11 @@
+
+figure{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.nav-item{
+    font-size: 18px;
+}

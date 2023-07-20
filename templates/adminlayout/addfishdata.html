@@ -1,0 +1,67 @@
+{% extends 'adminlayout/main.html' %}
+{% block body %}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+      <div class="container-fluid">
+          <div class="row mb-2">
+              <div class="col-sm-10">
+                  <h1 class="m-0">Add Fish Details</h1>
+              </div>
+          </div>
+
+            <form action="" method="post" enctype='multipart/form-data' class="form-horizontal form-label-left">
+            
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div><center>
+                      <label style="color:green;">{{msg}}</label>
+                      </center></div>
+
+                    <div class="form-group">
+                      <label for="title">Fish Name</label>
+                      <input type="text" class="form-control" name="Fish_Name" id="title" name="title" placeholder="Enter Fish Name" required>
+                    </div>
+                    
+                    <!-- <div class="form-group">
+                      <label for="slug">Post Slug</label>
+                      <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Choose Fish Type:</label>
+                      <select name="fishtype" class="form-control" id="fishtype">
+                        <option value="goldfish">Goldfish</option>
+                        <option value="bettafish">Bettafish</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Choose a Fish Image:</label>
+                      <input type="file" name='image' class="form-control" accept=".jpg,.jpeg,.png" >
+                    </div>
+
+                    -->
+                    
+                    
+                    
+                  </div>
+                </div>
+                <br>
+  
+                <!-- Text areas-->
+                <label>Fish Description</label>
+                <textarea class="form-control" name="Description" id="editor1" name="body" rows="10" placeholder="Enter Fish Detail"></textarea>
+                <br>
+                <div class="row">
+                  <button type="submit" name="action" class="btn btn-primary">Submit</button>
+                  <input type="button" class="btn btn-default" value="Cancel">
+                </div> 
+              </form>
+      </div>
+  </div>
+</div>
+
+
+
+{% endblock body %}

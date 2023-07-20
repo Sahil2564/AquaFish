@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <center>
+                                <h2>Contact Us&nbsp;<i class="far fa-comments"></i></h2>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <center>
+                                        <p>If you have any queries or feedback,<br /> Here's how to Contact Us.</p>
+                                    </center>
+                                </div>
+                            </div>
+                            <br />
+
+
+                            <div class="row">
+                                <div class="col">
+                                    <h5>Contact Information</h5>
+                                    <a href="#"><i class="fas fa-phone"></i>&nbsp; +(977) 9840167003, +(977) 9808900038;
+                                    </a>
+                                    <br>
+                                    <a href="#"><i class="fas fa-envelope"></i>&nbsp; inquiry@AquaFish.com </a>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <div><center>
+                                <label style="color:red; margin-top:10px; ">{{nameerror}}</label>
+                                <label style="color:red;">{{emailerror}}</label>
+                                <label style="color:blue;">{{success}}</label>
+                                <label style="color:red;">{{empty}}</label>
+                                <label style="color:red;">{{error}}</label>
+                                </center></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- For Feedback Form -->
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    
+
+                    <div class="row">
+                        <div class="col">
+                            <form class="box" action="" method="post">
+
+                            <div class="row">
+                                <div class="col">
+                                    <center>
+                                        <p>You can also send us a message using the form below and we'll get back to you
+                                            as soon as we can</p>
+                                    </center>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                   
+                                        <label>Name</label>
+                                        <div class="form-group">
+                                            <input Class="form-control" type="text" name="name" placeholder=" Name" required>
+
+                                        </div>
+                                        <label>Email</label>
+                                        <div class="form-group">
+                                            <input Class="form-control" type="email" name="email" placeholder="Gmail" required>
+
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label>Message</label>
+
+                                    <div class="form-group">
+                                        <textarea Class="form-control" ID="message" placeholder="Your Message"
+                                            type="text" name="message" required></textarea>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary"  name="submit" >Send Message</button>
+
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock body %}

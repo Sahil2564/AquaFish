@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="login">
+<div class="wrapper">
+<div>
+   <div><center>
+      <label style="color:red;">{{error}}</label>
+      </center></div>
+      <div><center>
+         <label style="color:green;">{{success}}</label> 
+         </center></div>
+</div>
+   <center>
+        <h4 class="card-title">Verify Gmail Here</h4>
+        <h5 class="card-title">Enter your OTP Here...</h5>
+        <p class="card-text">One time password has been sent to your gmail. Please check the gmail for the verification.</p>
+    </center>
+   <div class="form-container">
+      <div class="form-inner">
+         <form action="/validate" method="POST" class="signup">
+            <div class="form-group">
+                <label>G-mail:</label>
+               <input type="email" class="form-control" name="email" placeholder="name@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label>Enter OTP:</label>
+               <input type="text" class="form-control" name="otp" placeholder="OTP" required>
+            </div>
+            
+            <div class="field btn">
+               <div class="btn-layer"></div>
+               <input type="submit" value="Submit">
+            </div>
+            <a style="color:darkblue ;" href="/login">Back to Login Page</a>
+         </form>
+      </div>
+   </div>
+</div>
+</div>
+
+{% endblock body %}
